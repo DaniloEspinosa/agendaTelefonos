@@ -1,0 +1,25 @@
+{
+  "name": "6_agenda_telefono_ejercicio",
+  "version": "1.0.0",
+  "description": "Agenda básica de teléfonos",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Node",
+    "Express",
+    "Ejs",
+    "MySQL",
+    "Agenda"
+  ],
+  "author": "Danilo",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "mysql": "^2.18.1"
+  }
+}
