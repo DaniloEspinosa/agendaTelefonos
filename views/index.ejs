@@ -16,7 +16,7 @@
 <body>
     <header class="container text-center">
         <h1>Mi agenda</h1>
-        <a href="formulario.html" class="btn btn-primary" role="button" aria-disabled="true">Añadir contacto</a>
+        <a href="formulario" class="btn btn-primary" role="button" aria-disabled="true">Añadir contacto</a>
     </header>
 
     <main class="container">
@@ -27,19 +27,31 @@
                     <th>Apellido</th>
                     <th>Teléfono</th>
                     <th>Tipo</th>
+                    <th></th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
                 <% contactos.forEach(contacto=> { %>
                     <tr>
-                        <td><%= contacto.nombre %></td>
-                        <td><%= contacto.apellido %></td>
-                        <td><%= contacto.telefono %></td>
-                        <td><%= contacto.tipo %></td>
+                        <td>
+                            <%= contacto.nombre %>
+                        </td>
+                        <td>
+                            <%= contacto.apellido %>
+                        </td>
+                        <td>
+                            <%= contacto.telefono %>
+                        </td>
+                        <td>
+                            <%= contacto.tipo %>
+                        </td>
+                        <td><a href="editar/<%= contacto.id %>/<%= contacto.nombre %>/<%= contacto.apellido %>/<%= contacto.telefono %>/<%= contacto.tipo %>">✏</a></td>
+                        <td><a href="borrar/<%= contacto.id %>">🗑</a></td>
                     </tr>
 
                     <% }) %>
-                        <!-- <tr>
+                <!-- <tr>
                     <td>Dan</td>
                     <td>Stone</td>
                     <td>65478923</td>
@@ -67,8 +79,8 @@
                     <td>Dan</td>
                     <td>Stone</td>
                     <td>65478923</td>
-                    <td>Amigo</td> -->
-                        </tr>
+                    <td>Amigo</td>
+                </tr> -->
             </tbody>
         </table>
     </main>
